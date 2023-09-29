@@ -1,0 +1,20 @@
+{
+    "manifest_version": 2,
+ 
+    "name": "Google mentorship project thing", 
+    "description": "Test test",
+    "version": "1.0",
+    "author": "Gabriel Thompson",
+    "browser_action": {
+        "default_icon": "icon.png",
+        "default_popup": "popup.html",
+        "default_title": "My custom google Extension"
+    },
+      "background": {
+        "scripts": ["background.js"],
+        "persistent": false
+      },
+    "permissions": [
+        "activeTab"
+     ]
+}

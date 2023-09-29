@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Click It</title>
+        <script src="popup.js"></script>
+        <script>
+            var slider = document.getElementById("myRange");
+
+            slider.oninput = function() {
+              output.innerHTML = this.value;
+            }
+        </script>
+
+    <style type="text/css">
+    body {
+        margin: 50px;
+    }
+    </style>
+    </head>
+    <body>
+        <div style="height: 40vh;">
+            <h1>TextTunerTM</h1>
+            <p>Enter prompt for email to generate:</p>
+            <textarea id="prompt-input" placeholder="Enter what you want the email to be about here..." style="border-radius: 5px;"></textarea>
+            <br>
+            <p>Temperature:</p>
+            <input type="range" min="0" max="100" value="61" class="slider" id="myRange">
+            <p>Length:</p>
+            <input type="range" min="0" max="1000" value="600" class="slider" id="length">
+            <p>Model:</p>
+            <select name="model" id="model" multiple>
+                <option value="davinci:ft-personal-2023-05-08-17-18-25" selected="selected">davinci:ft-personal-2023-05-08-17-18-25</option>
+                <option value="davinci:ft-personal-2023-03-12-22-21-53">davinci:ft-personal-2023-03-12-22-21-53</option>
+            </select>
+            <br><br>
+            <button id="clickIt">Generate Email</button>
+            <br><br>
+            <br><br><br><br>
+        </div>
+    </body>
+</html>
+
+<!-- <!DOCTYPE html>
+<html>
+<head>
+  <title>Add Paragraph</title>
+  <script src="popup.js"></script>
+  <style>
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+  <button id="addButton">Add Paragraph</button>
+</body>
+</html> -->
